@@ -131,7 +131,7 @@
     const out: {[k: string]: any} = {};
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
-        let value = obj[key];
+        let value: any = obj[key];
         switch (typeof value) {
           case 'object':
             const name = value && value.constructor && (<any>value.constructor).name;
